@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.0 on win32)" generated="20230522 11:46:35.045" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="C:\Users\soura\Desktop\Assignment\TestCase\Testcase.robot">
+<kw name="Open Amazon Website" library="keyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230522 11:46:35.335" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20230522 11:46:35.335" endtime="20230522 11:46:40.306"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230522 11:46:40.306" endtime="20230522 11:46:40.470"/>
+</kw>
+<status status="PASS" starttime="20230522 11:46:35.335" endtime="20230522 11:46:40.470"/>
+</kw>
+<test id="s1-t1" name="TC1 ; OPEN AMAZON WEBSITE AND CLICK ON TODAY'S Deals" line="10">
+<kw name="Given Scroll Down to Todays Deals And Select product" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Today's deal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230522 11:46:40.471" endtime="20230522 11:46:40.774"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Today's deal}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230522 11:46:40.774" endtime="20230522 11:46:41.094"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Click on third item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 11:46:41.094" level="INFO">Clicking element 'xpath://*[@class='_deals-shoveler-v2_style_dealImage__3nlqg']'.</msg>
+<status status="PASS" starttime="20230522 11:46:41.094" endtime="20230522 11:46:46.899"/>
+</kw>
+<status status="PASS" starttime="20230522 11:46:40.471" endtime="20230522 11:46:46.899"/>
+</kw>
+<kw name="Then Clear Element Text" library="SeleniumLibrary">
+<arg>${Click on third item}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20230522 11:46:47.803" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230522 11:46:47.803" level="FAIL">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00718893+48451]
+	(No symbol) [0x006AB8A1]
+	(No symbol) [0x005B4F20]
+	(No symbol) [0x005DAECA]
+	(No symbol) [0x005FA2BC]
+	(No symbol) [0x005D9586]
+	(No symbol) [0x005FA614]
+	(No symbol) [0x0060C482]
+	(No symbol) [0x005FA0B6]
+	(No symbol) [0x005D7E08]
+	(No symbol) [0x005D8F2D]
+	GetHandleVerifier [0x00978E3A+2540266]
+	GetHandleVerifier [0x009B8959+2801161]
+	GetHandleVerifier [0x009B295C+2776588]
+	GetHandleVerifier [0x007A2280+612144]
+	(No symbol) [0x006B4F6C]
+	(No symbol) [0x006B11D8]
+	(No symbol) [0x006B12BB]
+	(No symbol) [0x006A4857]
+	BaseThreadInitThunk [0x755D7D59+25]
+	RtlInitializeExceptionChain [0x771AB74B+107]
+	RtlClearBits [0x771AB6CF+191]
+</msg>
+<status status="FAIL" starttime="20230522 11:46:46.899" endtime="20230522 11:46:47.888"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20230522 11:46:40.470" endtime="20230522 11:46:47.889">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=113.0.5672.127)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00718893+48451]
+	(No symbol) [0x006AB8A1]
+	(No symbol) [0x005B4F20]
+	(No symbol) [0x005DAECA]
+	(No symbol) [0x005FA2BC]
+	(No symbol) [0x005D9586]
+	(No symbol) [0x005FA614]
+	(No symbol) [0x0060C482]
+	(No symbol) [0x005FA0B6]
+	(No symbol) [0x005D7E08]
+	(No symbol) [0x005D8F2D]
+	GetHandleVerifier [0x00978E3A+2540266]
+	GetHandleVerifier [0x009B8959+2801161]
+	GetHandleVerifier [0x009B295C+2776588]
+	GetHandleVerifier [0x007A2280+612144]
+	(No symbol) [0x006B4F6C]
+	(No symbol) [0x006B11D8]
+	(No symbol) [0x006B12BB]
+	(No symbol) [0x006A4857]
+	BaseThreadInitThunk [0x755D7D59+25]
+	RtlInitializeExceptionChain [0x771AB74B+107]
+	RtlClearBits [0x771AB6CF+191]
+</status>
+</test>
+<status status="FAIL" starttime="20230522 11:46:35.047" endtime="20230522 11:46:47.893"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230522 11:46:35.334" level="ERROR">Error in file 'C:\Users\soura\Desktop\Assignment\TestCase\Testcase.robot' on line 6: Setting 'Suite Setup' is not allowed in resource file.</msg>
+<msg timestamp="20230522 11:46:35.334" level="ERROR">Error in file 'C:\Users\soura\Desktop\Assignment\Keywords\keyword.robot' on line 4: Error in file 'C:\Users\soura\Desktop\Assignment\TestCase\Testcase.robot' on line 9: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

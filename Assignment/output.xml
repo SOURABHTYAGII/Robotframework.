@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.0 on win32)" generated="20230522 16:06:05.833" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="c:\Users\soura\Desktop\Assignment\testcase\testcase.robot">
+<kw name="Open Amazon Website" library="keyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230522 16:06:06.616" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20230522 16:06:06.614" endtime="20230522 16:06:13.195"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230522 16:06:13.196" endtime="20230522 16:06:13.618"/>
+</kw>
+<status status="PASS" starttime="20230522 16:06:06.613" endtime="20230522 16:06:13.619"/>
+</kw>
+<test id="s1-t1" name="TC1 ; OPEN AMAZON WEBSITE AND CLICK ON TODAY'S Deals" line="9">
+<kw name="Given Scroll Down to Todays Deals And Select 3rd product" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Today's deal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230522 16:06:13.624" endtime="20230522 16:06:14.144"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Today's deal}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230522 16:06:14.144" endtime="20230522 16:06:14.545"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Click on third item}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230522 16:06:14.545" endtime="20230522 16:06:14.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Click on third item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 16:06:14.591" level="INFO">Clicking element 'xpath://*[@class="a-unordered-list a-nostyle a-horizontal feed-carousel-shelf _deals-shoveler-v2_style_list__pjYuB"]/li[3]'.</msg>
+<status status="PASS" starttime="20230522 16:06:14.590" endtime="20230522 16:06:16.280"/>
+</kw>
+<status status="PASS" starttime="20230522 16:06:13.622" endtime="20230522 16:06:16.280"/>
+</kw>
+<kw name="Then click on the 1st product of the list" library="keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${price}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230522 16:06:16.283" endtime="20230522 16:06:16.439"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Element}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230522 16:06:16.483" level="INFO">${Element} = 49,990</msg>
+<status status="PASS" starttime="20230522 16:06:16.440" endtime="20230522 16:06:16.484"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FirstProduct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 16:06:16.485" level="INFO">Clicking element 'xpath://*[@class='a-section octopus-dlp-image-shield'][1]'.</msg>
+<status status="PASS" starttime="20230522 16:06:16.484" endtime="20230522 16:06:23.845"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${price1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230522 16:06:23.845" endtime="20230522 16:06:24.065"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${matchingprice}</var>
+<arg>${price1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230522 16:06:24.196" level="INFO">${matchingprice} = 49,990</msg>
+<status status="PASS" starttime="20230522 16:06:24.065" endtime="20230522 16:06:24.196"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Element}</arg>
+<arg>${matchingprice}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230522 16:06:24.197" endtime="20230522 16:06:24.197"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TechanicalDetails}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230522 16:06:24.197" endtime="20230522 16:06:24.629"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${InRow}</var>
+<arg>${Rowpath}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230522 16:06:24.630" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20230522 16:06:24.754" level="INFO">${InRow} = 49</msg>
+<status status="PASS" starttime="20230522 16:06:24.630" endtime="20230522 16:06:24.755"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${ROW}</var>
+<value>1</value>
+<value>${InRow}+1</value>
+<iter>
+<var name="${ROW}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Inrange}</var>
+<arg>xpath://*[@id="productDetails_techspec_section_1"]/tbody/tr[${ROW}]/th</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230522 16:06:26.026" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230522 16:06:26.028" level="FAIL">Element with locator 'xpath://*[@id="productDetails_techspec_section_1"]/tbody/tr[1]/th' not found.</msg>
+<status status="FAIL" starttime="20230522 16:06:24.756" endtime="20230522 16:06:26.125"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Inrange}&quot; == &quot;${Screen Resolution}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ROW}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230522 16:06:26.127" endtime="20230522 16:06:26.127"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 16:06:26.125" endtime="20230522 16:06:26.127"/>
+</branch>
+<status status="NOT RUN" starttime="20230522 16:06:26.125" endtime="20230522 16:06:26.127"/>
+</if>
+<status status="FAIL" starttime="20230522 16:06:24.756" endtime="20230522 16:06:26.127"/>
+</iter>
+<status status="FAIL" starttime="20230522 16:06:24.755" endtime="20230522 16:06:26.128"/>
+</for>
+<status status="FAIL" starttime="20230522 16:06:16.282" endtime="20230522 16:06:26.129"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20230522 16:06:13.620" endtime="20230522 16:06:26.130">Element with locator 'xpath://*[@id="productDetails_techspec_section_1"]/tbody/tr[1]/th' not found.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230522 16:06:26.133" endtime="20230522 16:06:28.944"/>
+</kw>
+<status status="FAIL" starttime="20230522 16:06:05.844" endtime="20230522 16:06:28.945"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230522 16:06:24.630" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+</errors>
+</robot>
